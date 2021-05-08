@@ -3,7 +3,7 @@ package render
 import (
 	"bytes"
 	"fmt"
-	"github.com/serveye/backend-tech/pkg/config"
+	"github.com/serveye/backend-tech/config"
 	"html/template"
 	"log"
 	"net/http"

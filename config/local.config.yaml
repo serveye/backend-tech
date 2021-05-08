@@ -1,0 +1,7 @@
+server:
+  port:8080
+
+ database:
+   db_name: "dev_db"
+   db_user: "postgres"
+   db_password: "docker"
