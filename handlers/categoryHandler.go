@@ -1,4 +1,4 @@
-package controllers
+package handlers
 
 import (
 	"encoding/json"
@@ -10,7 +10,13 @@ import (
 	"net/http"
 )
 
-func GetCategories(w http.ResponseWriter, r *http.Request) {
+var app *config.AppConfig
+
+// AppConfig sets the application wide config
+func AppConfig(a *config.AppConfig) {
+	app = a
+}
+func (m *Repository) GetCategories(w http.ResponseWriter, r *http.Request) {
 	log.Println("came to controller")
 	var categories []models.Category
 	log.Println(config.DB)
@@ -23,7 +29,7 @@ func GetCategories(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func CreateCategory(w http.ResponseWriter, r *http.Request) {
+func (m *Repository) CreateCategory(w http.ResponseWriter, r *http.Request) {
 	var c viewModels.CategoryCreate
 	err := json.NewDecoder(r.Body).Decode(&c)
 	if err != nil {

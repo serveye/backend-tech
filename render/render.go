@@ -13,10 +13,10 @@ import (
 var functions = template.FuncMap{}
 
 var app *config.AppConfig
-func NewTemplateCache(a *config.AppConfig){
-	app =a
-}
 
+func NewTemplateCache(a *config.AppConfig) {
+	app = a
+}
 
 func RenderTemplate(w http.ResponseWriter, tmpl string) {
 

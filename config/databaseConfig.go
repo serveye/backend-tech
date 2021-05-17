@@ -9,11 +9,13 @@ import (
 	"net/http"
 	"strconv"
 )
+
 var DB *gorm.DB
+
 func ConnectDataBase() {
 
 	dsn := fmt.Sprintf("host=database user=%s password=%s dbname=%s port=%d sslmode=disable TimeZone=Asia/Shanghai",
-		"postgres","docker", "dev_db", 5432)
+		"postgres", "docker", "dev_db", 5432)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 	if err != nil {
@@ -30,7 +32,7 @@ func ConnectDataBase() {
 }
 
 func Paginate(r *http.Request) func(db *gorm.DB) *gorm.DB {
-	return func (db *gorm.DB) *gorm.DB {
+	return func(db *gorm.DB) *gorm.DB {
 		//limit := 2
 		page := 1
 		//sort := "created_at asc"
@@ -65,4 +67,3 @@ func Paginate(r *http.Request) func(db *gorm.DB) *gorm.DB {
 		return db.Offset(offset).Limit(pageSize)
 	}
 }
-

@@ -1,4 +1,4 @@
-package dataservice
+package services
 
 import (
 	"github.com/serveye/backend-tech/config"
