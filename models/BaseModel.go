@@ -6,8 +6,8 @@ import (
 
 // Base contains common columns for all tables.
 type Base struct {
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	CreatedAt time.Time  `json:"created_at"`
+	UpdatedAt time.Time  `json:"updated_at"`
 	DeletedAt *time.Time `sql:"index"`
 }
 

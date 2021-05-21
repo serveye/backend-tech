@@ -28,5 +28,3 @@ func ViperConfig(appConfig *AppConfig) {
 	// set config file type
 	viper.SetConfigType("yml")
 }
-
-
