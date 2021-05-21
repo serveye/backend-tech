@@ -4,7 +4,7 @@ import (
 	"github.com/serveye/backend-tech/models"
 )
 
-type BaseUser struct{
+type BaseUser struct {
 	FirstName   string         `json:"first_name"`
 	LastName    string         `json:"last_name"`
 	Email       string         `json:"email`

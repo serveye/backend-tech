@@ -3,18 +3,17 @@ package models
 type Address struct {
 	AddressLine1 string `json:"address_line_1"`
 	AddressLine2 string `json:"address_line_2"`
-	City string `json:"city"`
-	Province string `json:"province"`
-	PostalCode string `json:"postal_code"`
+	City         string `json:"city"`
+	Province     string `json:"province"`
+	PostalCode   string `json:"postal_code"`
 }
 
 type User struct {
-	firstName string
-	lastName string
-	email string
+	firstName       string
+	lastName        string
+	email           string
 	phoneNumber     string
-    Address         Address
+	Address         Address
 	IsAuthenticated bool `json:"is_authenticated"`
-	IsProvider bool `json:"is_provider"`
-
+	IsProvider      bool `json:"is_provider"`
 }

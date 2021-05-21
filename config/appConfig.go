@@ -8,19 +8,21 @@ type AppConfig struct {
 	UseCache bool
 
 	ServerConfig ServerConfiguration
-	DBConfig DatabaseConfiguration
+	DBConfig     DatabaseConfiguration
+	IsProduction bool
 }
+
 var EnvConfig *AppConfig
 
 func SetEnvConfig(envConfig *AppConfig) {
 	EnvConfig = envConfig
 }
+
 type ServerConfiguration struct {
 	Port int
 }
 type DatabaseConfiguration struct {
-	DBName string
-	DBUser string
+	DBName     string
+	DBUser     string
 	DBPassword string
-
 }

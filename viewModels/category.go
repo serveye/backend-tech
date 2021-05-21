@@ -12,8 +12,8 @@ type CategoryCreate struct {
 
 type CategoryView struct {
 	baseCategory
-	Id string `json:"id"`
+	Id        string    `json:"id"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
-	IsDeleted bool `json:"is_deleted"`
+	IsDeleted bool      `json:"is_deleted"`
 }

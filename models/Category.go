@@ -6,8 +6,8 @@ import (
 
 type Category struct {
 	Base
-	Id uuid.UUID `json:"id"`
-	Name string `json:"name"`
+	Id   uuid.UUID `json:"id"`
+	Name string    `json:"name"`
 }
 
 func (Category) TableName() string {
